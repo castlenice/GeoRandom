@@ -1,26 +1,44 @@
 import React from "react";
-import GoogleMap, { Marker } from "react-maps-google";
+import { LoadScript, GoogleMap } from "@react-google-maps/api";
 import "./App.css";
 
 // reactstrap components
-import {
-  Button
- 
-} from "reactstrap";
+import { Button } from "reactstrap";
 
-// core components
+const containerStyle = {
+  width: "100%",
+  height: "600px",
+};
 
+const center = {
+  lat: 40.708831,
+  lng: -74.0166889,
+};
+
+
+const configureMap = (map) => {
+  //map.disableDefaultUI = true;
+  console.log(map);
+};
 
 const App = () => {
   return (
-  <div className="App">
-    <div className="Map">
-      <GoogleMap apiKey="AIzaSyDN1EmofMqvJN0UTRO7noWW6ysjoscptEw">
-        <Marker position={{ lat: 40.7174343, lng: -73.9930319 }} />
-      </GoogleMap>
-    </div>
-    </div>
-  )
+    <LoadScript googleMapsApiKey="AIzaSyDN1EmofMqvJN0UTRO7noWW6ysjoscptEw">
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={15}
+        onLoad={configureMap}
+        options={{
+          disableDefaultUI: true,
+          mapTypeId: "satellite",
+          gestureHandling: "none",
+          tilt:45
+        }}
+    
+      ></GoogleMap>
+    </LoadScript>
+  );
 };
 
 export default App;
