@@ -1,7 +1,6 @@
 import {
   Navbar,
   NavbarBrand,
-  NavbarToggler,
   Collapse,
   Nav,
   NavItem,
@@ -9,7 +8,6 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText,
   Button,
 } from "reactstrap";
 import { NavLink } from "reactstrap";

@@ -4,7 +4,6 @@ import {
   CardTitle,
   CardText,
   CardBody,
-  Button,
   CardFooter,
 } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
