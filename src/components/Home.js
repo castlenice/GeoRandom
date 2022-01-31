@@ -9,15 +9,27 @@ const Home = () => {
         items={[
           {
             key: 1,
-            src: "https://picsum.photos/id/123/1200/600",
+            src: "https://picsum.photos/id/1002/1200/500",
           },
           {
             key: 2,
-            src: "https://picsum.photos/id/456/1200/600",
+            src: "https://picsum.photos/id/678/1200/500",
           },
           {
             key: 3,
-            src: "https://picsum.photos/id/678/1200/600",
+            src: "https://picsum.photos/id/362/1200/500",
+          },
+          {
+            key: 4,
+            src: "https://picsum.photos/id/1032/1200/500",
+          },
+          {
+            key: 5,
+            src: "https://picsum.photos/id/283/1200/500",
+          },
+          {
+            key: 5,
+            src: "https://picsum.photos/id/287/1200/500",
           },
         ]}
       />
