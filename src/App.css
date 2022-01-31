@@ -2,3 +2,8 @@
 .Map {
     height: 500px !important;
 }
+
+.button-1 {
+    display: flex;
+    justify-content: center;
+}

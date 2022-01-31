@@ -9,8 +9,6 @@ import { Button } from "reactstrap";
 
 // components
 
-
-
 const containerStyle = {
   width: "100%",
   height: "600px",
@@ -33,8 +31,13 @@ const randomCoordinates = () => {
   };
 };
 
+const firstCoordinates = {
+  lat: 51.453825,
+  lng: 7.032503,
+};
+
 const Game = () => {
-  const [location, setLocation] = useState(randomCoordinates());
+  const [location, setLocation] = useState(firstCoordinates);
 
   return (
     <>
@@ -51,7 +54,9 @@ const Game = () => {
           }}
         ></GoogleMap>
       </LoadScript>
-      <Button onClick={(e) => setLocation(randomCoordinates())}>Click</Button>
+      <div className="button-1">
+      <Button onClick={(e) => setLocation(randomCoordinates())}>Play</Button>
+      </div>
     </>
   );
 };
