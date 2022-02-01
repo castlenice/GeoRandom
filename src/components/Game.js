@@ -23,7 +23,7 @@ const randomCoordinates = () => {
     latitude: 51.453825,
     longitude: 7.032503,
   };
-  const R = 100000;
+  const R = 500000;
   const randomPoint = randomLocation.randomCirclePoint(P, R);
   return {
     lat: randomPoint.latitude,
