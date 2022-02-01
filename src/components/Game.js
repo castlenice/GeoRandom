@@ -11,7 +11,7 @@ import { Button } from "reactstrap";
 
 const containerStyle = {
   width: "100%",
-  height: "600px",
+  height: "800px",
 };
 
 // function getRandomNumber(min, max) {
@@ -39,8 +39,13 @@ const firstCoordinates = {
 const Game = () => {
   const [location, setLocation] = useState(firstCoordinates);
 
+  const currentLocation = {
+    lat: location.lat,
+    lng: location.lng
+  }
+
   return (
-    <>
+    <div className="Game">
       <LoadScript googleMapsApiKey="AIzaSyDN1EmofMqvJN0UTRO7noWW6ysjoscptEw">
         <GoogleMap
           mapContainerStyle={containerStyle}
@@ -49,15 +54,18 @@ const Game = () => {
           options={{
             disableDefaultUI: true,
             mapTypeId: "satellite",
-            gestureHandling: "none",
+            gestureHandling: "greedy",
             tilt: 45,
+            maxZoom: null,
+            minZoom: 13,
           }}
         ></GoogleMap>
       </LoadScript>
       <div className="button-1">
-      <Button onClick={(e) => setLocation(randomCoordinates())}>Play</Button>
+        <Button onClick={(e) => setLocation(randomCoordinates())}>Play</Button>
+        <Button onClick={(e) => setLocation(currentLocation)}>Back to Location</Button>
       </div>
-    </>
+    </div>
   );
 };
 
