@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { LoadScript, GoogleMap } from "@react-google-maps/api";
 import { useState } from "react";
 import randomLocation from "random-location";
@@ -31,18 +31,32 @@ const randomCoordinates = () => {
   };
 };
 
+
 const firstCoordinates = {
   lat: 51.453825,
   lng: 7.032503,
 };
 
+
+
 const Game = () => {
   const [location, setLocation] = useState(firstCoordinates);
+  const [correctLocations, setCorrectLocations] = useState([]);
+
+  
 
   const currentLocation = {
     lat: location.lat,
     lng: location.lng
   }
+
+
+  console.log(correctLocations);
+
+
+  // useEffect(() => {
+  //   location.lat.length >= 5 && location.lat.push();
+  // }, [location.lat]);
 
   return (
     <div className="Game">
@@ -62,8 +76,17 @@ const Game = () => {
         ></GoogleMap>
       </LoadScript>
       <div className="button-1">
-        <Button onClick={(e) => setLocation(randomCoordinates())}>Play</Button>
-        <Button onClick={(e) => setLocation(currentLocation)}>Back to Location</Button>
+        <Button disabled={correctLocations.length == 5} onClick={() => {
+          const nextLocation = randomCoordinates();
+          setLocation(nextLocation);
+          correctLocations.push(nextLocation)
+          setCorrectLocations(correctLocations)
+
+        }}>Play</Button>
+        <Button onClick={() => setLocation(currentLocation)}>Back to Location</Button>
+      </div>
+      <div>
+        <h2></h2>
       </div>
     </div>
   );
