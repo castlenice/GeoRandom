@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { LoadScript, GoogleMap } from "@react-google-maps/api";
 import { useState } from "react";
 import randomLocation from "random-location";
@@ -120,7 +120,7 @@ const Game = () => {
       </LoadScript>
       <div className="button-1">
         <Button
-          disabled={correctLocations.length == 5}
+          disabled={correctLocations.length === 5}
           onClick={() => {
             const nextLocation = randomCoordinates();
             setLocation(nextLocation);
