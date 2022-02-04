@@ -1,6 +1,7 @@
 
-.Map {
-    height: 500px !important;
+.Mini-Map {
+    display: flex;
+    justify-content: center;
 }
 
 .button-1 {
