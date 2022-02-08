@@ -1,10 +1,51 @@
 
+.Game {
+  background-color: #ECF1F9 !important;
+}
+
+
 .Mini-Map {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  background-color: #ECF1F9;
 }
 
 .button-1 {
-    display: flex;
-    justify-content: center;
+  display: inline-flex;
+  position: center !important;
+  justify-items: center !important;
+}
+
+.brand {
+  color: #FFFFFF !important;
+  margin-right: 100px !important;
+  margin-left: 20px;
+  /* border: 1px solid; */
+  border-radius: 20px;
+  background-color: #A5AED5 !important;
+}
+
+.navbar {
+  background-color: #ECF1F9 !important;
+  height: 7em;
+  font-family: "Lato", sans-serif !important;
+}
+
+.login {
+  color: #A5AED5 !important;
+  background-color: #FFFFFF !important;
+  border-radius: 20px !important;
+  border: 2px solid #A5AED5 !important;
+  margin-right: 20px;
+}
+
+.footer {
+  background-color: #ECF1F9 !important;
+  font-family: "Lato", sans-serif !important;
+}
+
+.cardgroup {
+  padding: 2em !important;
+  padding-top: 0.5em !important;
+  border: none !important;
 }

@@ -12,13 +12,14 @@ import {
 } from "reactstrap";
 import { NavLink } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../App.css"
 
 const NavbarComponent = () => {
   return (
     <div>
-      <Navbar color="light" expand="md" light>
+      <Navbar className="navbar" expand="md" light>
         <NavbarBrand>
-          <NavLink className="link" href="/">
+          <NavLink className="brand" href="/">
             GeoRandom
           </NavLink>
         </NavbarBrand>
@@ -39,7 +40,7 @@ const NavbarComponent = () => {
                 </DropdownItem>
                 <DropdownItem>Browse Maps</DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
+                <DropdownItem>Logout</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
@@ -48,7 +49,7 @@ const NavbarComponent = () => {
               </NavLink>
             </NavItem>
           </Nav>
-          <Button>Login</Button>
+          <Button className="login">Login</Button>
         </Collapse>
       </Navbar>
     </div>

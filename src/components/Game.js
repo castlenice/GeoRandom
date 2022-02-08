@@ -2,6 +2,7 @@ import React from "react";
 import { LoadScript, GoogleMap } from "@react-google-maps/api";
 import { useState } from "react";
 import randomLocation from "random-location";
+import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // reactstrap components
@@ -19,7 +20,7 @@ const containerStyle = {
 //   return Math.random() * (max - min) + min;
 // }
 
-const randomCoordinates = () => {
+export const randomCoordinates = () => {
   const P = [
     {
       latitude: 50.11321, //mittelpunkt der europaeischen union
@@ -67,7 +68,7 @@ const randomCoordinates = () => {
     },
   ];
   const L = P[Math.floor(Math.random() * P.length)];
-  console.log(L);
+  //console.log(L);
 
   const R = 424000;
   const randomPoint = randomLocation.randomCirclePoint(L, R);

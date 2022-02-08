@@ -62,36 +62,43 @@ function InitMap() {
   const [currentGuess, setCurrentGuess] = useState();
 
   return (
-    <div className="Mini-Map">
-      <LoadScript googleMapsApiKey="AIzaSyDN1EmofMqvJN0UTRO7noWW6ysjoscptEw">
-        <GoogleMap
-          onClick={(e) => {
-            setCurrentGuess(e.latLng);
-          }}
-          mapContainerStyle={containerStyle}
-          center={firstCoordinates}
-          zoom={1}
-          options={{
-            disableDefaultUI: false,
-            mapTypeId: "roadmap",
-            gestureHandling: "greedy",
-            tilt: 45,
-            minZoom: 1,
+    <>
+      <div className="Mini-Map">
+        <LoadScript googleMapsApiKey="AIzaSyDN1EmofMqvJN0UTRO7noWW6ysjoscptEw">
+          <GoogleMap
+            onClick={(e) => {
+              setCurrentGuess(e.latLng);
+            }}
+            mapContainerStyle={containerStyle}
+            center={currentGuess || firstCoordinates}
+            zoom={1}
+            options={{
+              disableDefaultUI: false,
+              mapTypeId: "roadmap",
+              gestureHandling: "greedy",
+              tilt: 45,
+              minZoom: 1,
+              disableDoubleClickZoom: true,
+              draggableCursor: "crosshair",
+            }}
+          >
+            <Marker position={currentGuess}></Marker>
+          </GoogleMap>
+        </LoadScript>
+      </div>
+      <div className="button-1">
+        <Button
+          onClick={() => {
+            const x = {lat:currentGuess.lat(), lng:currentGuess.lng()}
+            guessedLocations.push(x);
+            setGuessedLocations(guessedLocations);
+            console.log(guessedLocations);
           }}
         >
-          <Marker position={currentGuess}></Marker>
-        </GoogleMap>
-      </LoadScript>
-      <Button
-        onClick={() => {
-          guessedLocations.push(currentGuess);
-          console.log(guessedLocations);
-          setGuessedLocations(guessedLocations);
-        }}
-      >
-        Submit Guess
-      </Button>
-    </div>
+          Submit Guess
+        </Button>
+      </div>
+    </>
   );
 }
 export default InitMap;
