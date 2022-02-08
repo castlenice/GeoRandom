@@ -1,55 +1,13 @@
 import react from "react";
 import { LoadScript, GoogleMap, Marker } from "@react-google-maps/api";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../App.css";
-import { Button } from "reactstrap";
-// const MiniMap = () => {
-
-//     const getInitialState = () => {
-//         return {
-//             marker: null,
-//             size: "small"
-//         };
-//     },
-
-//     const mapOptions = () => {
-
-//         google.maps.MapOptions = {
-//             center: { lat: 0, lng: 0 },
-//             zoom: 1,
-//             zoomControl: true,
-//             streetViewControl: false,
-//             mapTypeControl: false,
-//             draggableCursor: 'crosshair'
-
-//         };
-//     }
-
-// export default MiniMap
+import { Button, NavLink } from "reactstrap";
+import { useContext } from "react";
+import { gameContext } from "./GameContext";
 
 function InitMap() {
-  //     const myLatlng = { lat: -25.363, lng: 131.044 };
-  //     const map = new google.maps.Map(document.getElementById("map"), {
-  //       zoom: 4,
-  //       center: myLatlng,
-  //     });
-  //     const marker = new google.maps.Marker({
-  //       position: myLatlng,
-  //       map,
-  //       title: "Click to zoom",
-  //     });
-
-  //     map.addListener("center_changed", () => {
-  //       // 3 seconds after the center of the map has changed, pan back to the
-  //       // marker.
-  //       window.setTimeout(() => {
-  //         map.panTo(marker.getPosition());
-  //       }, 3000);
-  //     });
-  //     marker.addListener("click", () => {
-  //       map.setZoom(8);
-  //       map.setCenter(marker.getPosition());
-  //     });
   const containerStyle = {
     width: "500px",
     height: "350px",
@@ -58,8 +16,11 @@ function InitMap() {
     lat: 51.453825,
     lng: 7.032503,
   };
-  const [guessedLocations, setGuessedLocations] = useState([]);
-  const [currentGuess, setCurrentGuess] = useState();
+
+  const {
+    currentGuess,
+    setCurrentGuess,
+  } = useContext(gameContext);
 
   return (
     <>
@@ -67,7 +28,7 @@ function InitMap() {
         <LoadScript googleMapsApiKey="AIzaSyDN1EmofMqvJN0UTRO7noWW6ysjoscptEw">
           <GoogleMap
             onClick={(e) => {
-              setCurrentGuess(e.latLng);
+              setCurrentGuess({ lat: e.latLng.lat(), lng: e.latLng.lng() });
             }}
             mapContainerStyle={containerStyle}
             center={currentGuess || firstCoordinates}
@@ -85,18 +46,6 @@ function InitMap() {
             <Marker position={currentGuess}></Marker>
           </GoogleMap>
         </LoadScript>
-      </div>
-      <div className="button-1">
-        <Button
-          onClick={() => {
-            const x = {lat:currentGuess.lat(), lng:currentGuess.lng()}
-            guessedLocations.push(x);
-            setGuessedLocations(guessedLocations);
-            console.log(guessedLocations);
-          }}
-        >
-          Submit Guess
-        </Button>
       </div>
     </>
   );

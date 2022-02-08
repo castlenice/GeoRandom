@@ -1,24 +1,22 @@
 import React from "react";
 import { LoadScript, GoogleMap } from "@react-google-maps/api";
-import { useState } from "react";
 import randomLocation from "random-location";
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import { Button } from "reactstrap";
 
 // components
 import InitMap from "./Mini-Map";
+import { gameContext } from "./GameContext";
 
 const containerStyle = {
   width: "100%",
   height: "800px",
 };
-
-// function getRandomNumber(min, max) {
-//   return Math.random() * (max - min) + min;
-// }
 
 export const randomCoordinates = () => {
   const P = [
@@ -78,14 +76,16 @@ export const randomCoordinates = () => {
   };
 };
 
-const firstCoordinates = {
-  lat: 51.453825,
-  lng: 7.032503,
-};
-
 const Game = () => {
-  const [location, setLocation] = useState(firstCoordinates);
-  const [correctLocations, setCorrectLocations] = useState([]);
+  const {
+    location,
+    setLocation,
+    correctLocations,
+    setCorrectLocations,
+    currentGuess,
+    guessedLocations,
+    setGuessedLocations,
+  } = useContext(gameContext);
 
   const currentLocation = {
     lat: location.lat,
@@ -112,22 +112,19 @@ const Game = () => {
 
       <InitMap />
 
+      <Button
+        tag={Link}
+        to="/game/results"
+        onClick={() => {
+          guessedLocations.push(currentGuess);
+          setGuessedLocations(guessedLocations);
+          console.log(guessedLocations);
+        }}
+      >
+        Submit Guess
+      </Button>
+
       <div className="button-1">
-        <Button
-          disabled={correctLocations.length === 5}
-          onClick={() => {
-            const nextLocation = randomCoordinates(); //.hier kommen die generierten koordinaten her
-            setLocation(nextLocation); //setzt den wert von "location", der sich immer veraendert
-            correctLocations.push(nextLocation); //nextLocation wird in den leeren array "correctLocations gepusht"
-            setCorrectLocations(correctLocations);
-            // function setCorrectLocations({ lat, lng }) {
-            //   const latLng = 'Your ' + lat + lng + '.';
-            //   return latLng;
-            // }
-          }}
-        >
-          Play
-        </Button>
         <Button onClick={() => setLocation(currentLocation)}>
           Back to Location
         </Button>

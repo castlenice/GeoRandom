@@ -9,6 +9,8 @@ import NavbarComponent from "./components/Navbar.js";
 import Footer from "./components/Footer.js";
 import Game from "./components/Game.js";
 import Home from "./components/Home.js";
+import ResultMap from "./components/ResultMap";
+import GameState from "./components/GameContext";
 
 const App = () => {
   return (
@@ -18,14 +20,17 @@ const App = () => {
           <NavbarComponent />
         </div>
       </header>
-      <main>
-        <div className="routes">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/game" element={<Game />} />
-          </Routes>
-        </div>
-      </main>
+      <GameState>
+        <main>
+          <div className="routes">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/game" element={<Game />} />
+              <Route path="/game/results" element={<ResultMap />} />
+            </Routes>
+          </div>
+        </main>
+      </GameState>
       <footer>
         <div className="Footer">
           <Footer />

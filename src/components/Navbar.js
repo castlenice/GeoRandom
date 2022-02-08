@@ -12,7 +12,7 @@ import {
 } from "reactstrap";
 import { NavLink } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../App.css"
+import "../App.css";
 
 const NavbarComponent = () => {
   return (
@@ -34,7 +34,7 @@ const NavbarComponent = () => {
               <DropdownToggle caret nav>
                 Maps
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu end>
                 <DropdownItem className="link" href="/game">
                   Play Game
                 </DropdownItem>
