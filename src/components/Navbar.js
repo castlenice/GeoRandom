@@ -38,13 +38,18 @@ const NavbarComponent = () => {
                 <DropdownItem className="link" href="/game">
                   Play Game
                 </DropdownItem>
-                <DropdownItem>Browse Maps</DropdownItem>
+                <DropdownItem className="link" href="/game">
+                  Browse Maps
+                </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>Logout</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <NavLink href="https://github.com/castlenice/GeoRandom" target="_blank">
+              <NavLink
+                href="https://github.com/castlenice/GeoRandom"
+                target="_blank"
+              >
                 GitHub
               </NavLink>
             </NavItem>

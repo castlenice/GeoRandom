@@ -23,24 +23,24 @@ const Home = () => {
         items={[
           {
             key: 1,
-            src: "https://picsum.photos/id/1002/1200/500",
+            src: "https://picsum.photos/id/902/1200/500",
           },
           {
             key: 2,
-            src: "https://picsum.photos/id/1015/1200/500",
+            src: "https://picsum.photos/id/1002/1200/500",
             captionHeader: "",
           },
           {
             key: 3,
-            src: "https://picsum.photos/id/1032/1200/500",
+            src: "https://picsum.photos/id/1015/1200/500",
           },
           {
             key: 4,
-            src: "https://picsum.photos/id/283/1200/500",
+            src: "https://picsum.photos/id/1032/1200/500",
           },
           {
             key: 5,
-            src: "https://picsum.photos/id/902/1200/500",
+            src: "https://picsum.photos/id/283/1200/500",
           },
         ]}
       />
@@ -69,12 +69,12 @@ const Home = () => {
           <CardBody>
             <CardTitle tag="h5">Test your geography knowledge</CardTitle>
             <CardSubtitle className="mb-2 text-muted" tag="h6">
-              Card subtitle
+              Fun stuff
             </CardSubtitle>
             <CardText>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
+              Your geography lessons in school sucked? Discover geography in a
+              new and fun way. Learn where countries and regions actually are
+              and what they look like.
             </CardText>
           </CardBody>
         </Card>
@@ -89,14 +89,16 @@ const Home = () => {
           <CardBody>
             <CardTitle tag="h5">Explore the world from above</CardTitle>
             <CardSubtitle className="mb-2 text-muted" tag="h6">
-              Card subtitle
+              Adventurous stuff
             </CardSubtitle>
             <CardText>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
+              You were a globetrotter before COVID hit? You are tired of being
+              stuck at home in front of your computer? Now you can explore the
+              world again - and this time from above!
             </CardText>
-            <Button className="playbutton"><big>PLAY</big></Button>
+            <Button className="playbutton" href="/game">
+              <big>PLAY</big>
+            </Button>
           </CardBody>
         </Card>
         <Card className="cardgroup">
@@ -109,15 +111,13 @@ const Home = () => {
           />
           <CardBody>
             <CardTitle tag="h5">
-              Discover different location-based maps or create your own
+              Discover different thematic maps 
             </CardTitle>
             <CardSubtitle className="mb-2 text-muted" tag="h6">
-              Card subtitle
+              Weird map stuff
             </CardSubtitle>
             <CardText>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
+              This option is still in the making. But don't be disappointed! Thematic maps like "The worlds most curious places" and "Famous place or fraud? - You decide!" will be here in no time.
             </CardText>
           </CardBody>
         </Card>

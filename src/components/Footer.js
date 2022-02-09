@@ -1,4 +1,4 @@
-import { Card, CardText, CardBody, CardFooter, Button } from "reactstrap";
+import { Card, CardBody, CardFooter, Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 
@@ -6,10 +6,10 @@ const Footer = () => {
   return (
     <Card className="footer">
       <CardBody className="cardbody">
-        <CardText>Find me on GitHub and Instagram!</CardText>
         <div className="footerbutton">
-          <Button className="button-f1">GitHub</Button>
-          <Button className="button-f2">Instagram</Button>
+          <Button className="button-f1"><a href="https://github.com/castlenice/GeoRandom">GitHub</a></Button>
+          <Button className="button-f2"><a href="https://www.linkedin.com/in/sonja-schoenburg/">LinkedIn</a></Button>
+          <Button className="button-f2"><a href="https://www.instagram.com/nicecastle/">Instagram</a></Button>
         </div>
       </CardBody>
       <CardFooter className="cardfooter">

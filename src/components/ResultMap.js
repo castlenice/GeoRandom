@@ -36,7 +36,7 @@ const ResultMap = (rounds) => {
 
   console.log(guessedLocations);
   return (
-    <div className="ResultMap">
+    <div className="resultmap">
       <LoadScript googleMapsApiKey="AIzaSyDN1EmofMqvJN0UTRO7noWW6ysjoscptEw">
         <GoogleMap
           mapContainerStyle={containerStyle}
@@ -71,16 +71,19 @@ const ResultMap = (rounds) => {
           )}
         </GoogleMap>
       </LoadScript>
-      <p>
-        Guess distance:{" "}
-        {randomLocation.distance(
-          { latitude: location.lat, longitude: location.lng },
-          { latitude: currentGuess.lat, longitude: currentGuess.lng }
-        ) / 1000}{" "}
-        km
-      </p>
+      <div className="resultmessage">
+        <p>
+          Your guess was {" "} 
+          {randomLocation.distance(
+            { latitude: location.lat, longitude: location.lng },
+            { latitude: currentGuess.lat, longitude: currentGuess.lng }
+          ) / 1000}{" "}
+          kilometer from the right location!
+        </p>
+      </div>
       {correctLocations.length === 5 ? (
         <Button
+          className="resultbutton"
           tag={Link}
           to="/game"
           onClick={() => {
@@ -96,6 +99,7 @@ const ResultMap = (rounds) => {
         </Button>
       ) : (
         <Button
+          className="resultbutton"
           tag={Link}
           to="/game"
           onClick={() => {

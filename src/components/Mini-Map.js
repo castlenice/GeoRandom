@@ -1,20 +1,16 @@
-import react from "react";
 import { LoadScript, GoogleMap, Marker } from "@react-google-maps/api";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 import "../App.css";
-import { Button, NavLink } from "reactstrap";
 import { useContext } from "react";
 import { gameContext } from "./GameContext";
 
 function InitMap() {
   const containerStyle = {
     width: "100%",
-    height: "350px",
+    height: "475px",
   };
   const firstCoordinates = {
-    lat: 51.453825,
-    lng: 7.032503,
+    lat: 29.976989,
+    lng: 19.184017, //Lybien
   };
 
   const {
@@ -32,7 +28,7 @@ function InitMap() {
             }}
             mapContainerStyle={containerStyle}
             center={currentGuess || firstCoordinates}
-            zoom={1}
+            zoom={3}
             options={{
               disableDefaultUI: false,
               mapTypeId: "roadmap",

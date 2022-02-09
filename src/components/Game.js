@@ -80,8 +80,6 @@ const Game = () => {
   const {
     location,
     setLocation,
-    correctLocations,
-    setCorrectLocations,
     currentGuess,
     guessedLocations,
     setGuessedLocations,
@@ -112,31 +110,22 @@ const Game = () => {
 
       <InitMap />
 
-      <div className="button-1">
-      <Button
-        tag={Link}
-        to="/game/results"
-        onClick={() => {
-          guessedLocations.push(currentGuess);
-          setGuessedLocations(guessedLocations);
-          console.log(guessedLocations);
-        }}
-        className="mx-1"
-      >
-        Submit Guess
-      </Button>
-
+      <div className="button-game">
+        <Button
+          tag={Link}
+          to="/game/results"
+          onClick={() => {
+            guessedLocations.push(currentGuess);
+            setGuessedLocations(guessedLocations);
+            console.log(guessedLocations);
+          }}
+          className="mx-1"
+        >
+          Submit Guess
+        </Button>
         <Button onClick={() => setLocation(currentLocation)} className="mx-1">
           Back to Location
         </Button>
-      </div>
-      <div className="random-coordinate-list">
-        {correctLocations.map((coordinate, index) => (
-          <ul>
-            <li key={index}>Latitude: {coordinate.lat}</li>
-            <li key={index}>Longitude: {coordinate.lng}</li>
-          </ul>
-        ))}
       </div>
     </div>
   );

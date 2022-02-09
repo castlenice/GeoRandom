@@ -1,59 +1,58 @@
 .Game {
-  background-color: #ECF1F9 !important;
+  background-color: #ecf1f9 !important;
   width: 97vw;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-
 .Mini-Map {
   display: flex;
   justify-content: center;
-  background-color: #ECF1F9;
+  background-color: #ecf1f9;
 }
 
-.button-1 {
+.button-game {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
 }
 
 .brand {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   margin-right: 100px !important;
   margin-left: 20px;
   /* border: 1px solid; */
   border-radius: 20px;
-  background-color: #A5AED5 !important;
+  background-color: #a5aed5 !important;
 }
 
 .navbar {
-  background-color: #ECF1F9 !important;
+  background-color: #ecf1f9 !important;
   height: 6.5em;
   font-family: "Lato", sans-serif !important;
 }
 
-.login  {
-  color: #A5AED5 !important;
-  background-color: #FFFFFF !important;
+.login {
+  color: #a5aed5 !important;
+  background-color: #ffffff !important;
   border-radius: 20px !important;
-  border: 2px solid #A5AED5 !important;
+  border: 2px solid #a5aed5 !important;
   margin-right: 20px;
-  
 }
 
 .playbutton {
-  color: #FFFFFF !important;
-  background-color: #A5AED5 !important;
+  color: #ffffff !important;
+  background-color: #a5aed5 !important;
   border-radius: 20px !important;
-  border: 2px solid #FFFFFF !important;
+  border: 2px solid #ffffff !important;
   padding-left: 40px !important;
   padding-right: 40px !important;
+  margin-left: 195px !important;
 }
 
 .footer {
-  background-color: #ECF1F9 !important;
+  background-color: #ecf1f9 !important;
   font-family: "Lato", sans-serif !important;
 }
 
@@ -73,7 +72,44 @@
   justify-content: left;
 }
 
-.button-f1, .button-f2 {
+.button-f1,
+.button-f2 {
+  color: #a5aed5 !important;
+  background-color: #ffffff !important;
+  border-radius: 20px !important;
+  border: 2px solid #a5aed5 !important;
+  margin: 5px;
+}
 
-  margin-left: 10px !important
+a {
+  color: #a5aed5 !important;
+  text-decoration: none !important;
+}
+
+.mx-1 {
+  color: #8191da !important;
+  font-weight: bold !important;
+  background-color: #ffffff !important;
+  border-radius: 20px !important;
+  border: 2px solid #8191da !important;
+}
+
+.resultmap {
+  background-color: #ecf1f9;
+}
+
+.resultbutton {
+  margin-left: 875px !important;
+  color: #8191da !important;
+  font-weight: bold !important;
+  background-color: #ffffff !important;
+  border-radius: 20px !important;
+  border: 2px solid #8191da !important;
+}
+
+.resultmessage {
+  display: flex;
+  justify-content: center;
+  color: #8191da !important;
+  font-weight: bold !important;
 }
