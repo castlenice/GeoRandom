@@ -44,7 +44,7 @@ const NavbarComponent = () => {
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <NavLink href="https://github.com/castlenice" target="_blank">
+              <NavLink href="https://github.com/castlenice/GeoRandom" target="_blank">
                 GitHub
               </NavLink>
             </NavItem>

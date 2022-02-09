@@ -112,6 +112,7 @@ const Game = () => {
 
       <InitMap />
 
+      <div className="button-1">
       <Button
         tag={Link}
         to="/game/results"
@@ -120,12 +121,12 @@ const Game = () => {
           setGuessedLocations(guessedLocations);
           console.log(guessedLocations);
         }}
+        className="mx-1"
       >
         Submit Guess
       </Button>
 
-      <div className="button-1">
-        <Button onClick={() => setLocation(currentLocation)}>
+        <Button onClick={() => setLocation(currentLocation)} className="mx-1">
           Back to Location
         </Button>
       </div>

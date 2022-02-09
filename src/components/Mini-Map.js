@@ -9,7 +9,7 @@ import { gameContext } from "./GameContext";
 
 function InitMap() {
   const containerStyle = {
-    width: "500px",
+    width: "100%",
     height: "350px",
   };
   const firstCoordinates = {
@@ -24,7 +24,7 @@ function InitMap() {
 
   return (
     <>
-      <div className="Mini-Map">
+      <div className="Mini-Map my-3">
         <LoadScript googleMapsApiKey="AIzaSyDN1EmofMqvJN0UTRO7noWW6ysjoscptEw">
           <GoogleMap
             onClick={(e) => {

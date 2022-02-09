@@ -1,6 +1,9 @@
-
 .Game {
   background-color: #ECF1F9 !important;
+  width: 97vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -11,9 +14,9 @@
 }
 
 .button-1 {
-  display: inline-flex;
-  position: center !important;
-  justify-items: center !important;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .brand {
@@ -27,16 +30,26 @@
 
 .navbar {
   background-color: #ECF1F9 !important;
-  height: 7em;
+  height: 6.5em;
   font-family: "Lato", sans-serif !important;
 }
 
-.login {
+.login  {
   color: #A5AED5 !important;
   background-color: #FFFFFF !important;
   border-radius: 20px !important;
   border: 2px solid #A5AED5 !important;
   margin-right: 20px;
+  
+}
+
+.playbutton {
+  color: #FFFFFF !important;
+  background-color: #A5AED5 !important;
+  border-radius: 20px !important;
+  border: 2px solid #FFFFFF !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
 }
 
 .footer {
@@ -48,4 +61,19 @@
   padding: 2em !important;
   padding-top: 0.5em !important;
   border: none !important;
+}
+
+.cardfooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardbody {
+  display: flex;
+  justify-content: left;
+}
+
+.button-f1, .button-f2 {
+
+  margin-left: 10px !important
 }
