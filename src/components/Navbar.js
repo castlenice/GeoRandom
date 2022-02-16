@@ -1,6 +1,6 @@
+import react from "react"
 import {
   Navbar,
-  NavbarBrand,
   Collapse,
   Nav,
   NavItem,
@@ -18,11 +18,9 @@ const NavbarComponent = () => {
   return (
     <div>
       <Navbar className="navbar" expand="md" light>
-        <NavbarBrand>
           <NavLink className="brand" href="/">
             GeoRandom
           </NavLink>
-        </NavbarBrand>
         <Collapse navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
