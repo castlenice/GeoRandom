@@ -96,9 +96,11 @@ const Home = () => {
               stuck at home in front of your computer? Now you can explore the
               world again - and this time from above!
             </CardText>
-            <Button className="playbutton" href="/game">
-              <big>PLAY</big>
-            </Button>
+            <div className="button-container">
+              <Button className="playbutton" href="/game">
+                <big>PLAY</big>
+              </Button>
+            </div>
           </CardBody>
         </Card>
         <Card className="cardgroup">
@@ -110,14 +112,14 @@ const Home = () => {
             height="400px"
           />
           <CardBody>
-            <CardTitle tag="h5">
-              Discover different thematic maps 
-            </CardTitle>
+            <CardTitle tag="h5">Discover different thematic maps</CardTitle>
             <CardSubtitle className="mb-2 text-muted" tag="h6">
               Weird map stuff
             </CardSubtitle>
             <CardText>
-              This option is still in the making. But don't be disappointed! Thematic maps like "The worlds most curious places" and "Famous place or fraud? - You decide!" will be here in no time.
+              This option is still in the making. But don't be disappointed!
+              Thematic maps like "The worlds most curious places" and "Famous
+              place or fraud? - You decide!" will be here in no time.
             </CardText>
           </CardBody>
         </Card>

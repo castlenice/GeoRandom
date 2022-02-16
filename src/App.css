@@ -41,14 +41,18 @@
   margin-right: 20px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
 .playbutton {
   color: #ffffff !important;
   background-color: #a5aed5 !important;
   border-radius: 20px !important;
   border: 2px solid #ffffff !important;
   padding-left: 40px !important;
-  padding-right: 40px !important;
-  margin-left: 195px !important;
+  padding-right: 40px !important
 }
 
 .footer {
