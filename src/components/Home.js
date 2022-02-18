@@ -28,7 +28,6 @@ const Home = () => {
           {
             key: 2,
             src: "https://picsum.photos/id/1002/1200/500",
-            captionHeader: "",
           },
           {
             key: 3,
@@ -59,7 +58,7 @@ const Home = () => {
       />
       <CardGroup>
         <Card className="cardgroup">
-          <CardImg
+          <CardImg className="cardimg"
             alt="Card image cap"
             src="https://images.unsplash.com/photo-1460186136353-977e9d6085a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             top
@@ -79,7 +78,7 @@ const Home = () => {
           </CardBody>
         </Card>
         <Card className="cardgroup">
-          <CardImg
+          <CardImg className="cardimg"
             alt="Card image cap"
             src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
             top
@@ -104,7 +103,7 @@ const Home = () => {
           </CardBody>
         </Card>
         <Card className="cardgroup">
-          <CardImg
+          <CardImg className="cardimg"
             alt="Card image cap"
             src="https://images.unsplash.com/photo-1457327289196-f38b88d97147?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
             top

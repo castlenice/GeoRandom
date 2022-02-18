@@ -64,6 +64,47 @@ export const randomCoordinates = () => {
       latitude: 41.073267, //BRC, nevada, usa
       longitude: -119.120486,
     },
+    {
+      latitude: 13.125303, //San, Mali, Africa
+      longitude: -4.943870,
+    },
+    {
+      latitude: 0.654698, //Djolu, Kongo, Africa
+      longitude: 22.108861,
+    },
+    {
+      latitude: -29.101332, //Bo Karoo, South Africa
+      longitude: 22.500045,
+    },
+    {
+      latitude: -34.026708, //New South Wales, Australia
+      longitude: 145.033251,
+    },
+    {
+      latitude: -16.103179, //Northern Territory, Australia
+      longitude:  132.714100,
+    },
+    {
+      latitude: 7.066306, //El Amparo, Venezuela
+      longitude:  -70.867708,
+    },
+    {
+      latitude: -12.645210, //Manu, Peru
+      longitude:  -71.666274,
+    },
+    {
+      latitude: -39.625646, //Provinz Rio Negro, Argentina
+      longitude:  -68.446586,
+    },
+    {
+      latitude: -9.432346, //Permambuco, Brasilien
+      longitude:  -40.657190,
+    },
+    {
+      latitude: 21.133537, //Guanajuato, Mexiko
+      longitude:  -101.313092,
+    },
+    
   ];
   const L = P[Math.floor(Math.random() * P.length)];
   //console.log(L);

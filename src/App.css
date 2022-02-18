@@ -76,6 +76,10 @@
   justify-content: left;
 }
 
+.cardimg {
+  object-fit: cover;
+}
+
 .button-f1,
 .button-f2 {
   color: #a5aed5 !important;
